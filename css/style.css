@@ -338,6 +338,11 @@ code {
   height: 150px;
   overflow: hidden;
 }
+.post .post-excerpt .blueBgTitle,
+.post .post-excerpt .blueBg {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 .post .post-excerpt p {
   line-height: 26px;
 }
@@ -361,12 +366,7 @@ code {
   margin: 0;
   line-height: 25px;
 }
-.post .post-content {
-  margin-top: 20px;
-  word-break: break-all;
-  overflow: hidden;
-}
-.post .post-content .blueBgTitle {
+.post .blueBgTitle {
   background: rgba(50,115,220,0.6);
   color: #fff;
   font-size: 18px;
@@ -375,7 +375,7 @@ code {
   text-indent: 10px;
   border-radius: 3px;
 }
-.post .post-content .blueBg {
+.post .blueBg {
   background: rgba(30,144,255,0.5);
   color: #fff;
   font-size: 16px;
@@ -386,6 +386,11 @@ code {
   padding-right: 10px;
   margin-top: 0;
   margin-bottom: 0;
+}
+.post .post-content {
+  margin-top: 20px;
+  word-break: break-all;
+  overflow: hidden;
 }
 .post .post-content p {
   line-height: 26px;
