@@ -78,7 +78,7 @@
 
 
             
-                <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/code/">技术</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">生活</a><span class="category-list-count">1</span></li></ul>
+                <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/code/">技术</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">生活</a><span class="category-list-count">2</span></li></ul>
             
 
         </nav>
@@ -98,7 +98,7 @@
                 
 
                 
-                    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/code/">技术</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">生活</a><span class="category-list-count">1</span></li></ul>
+                    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/code/">技术</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">生活</a><span class="category-list-count">2</span></li></ul>
                 
             </div>
         </div>
@@ -113,33 +113,30 @@
                     
     
         <article class="box post post-item">
-                <div class="post-title"><a href="/2021/01/28/macleaya%E4%B8%BB%E9%A2%98%E4%BD%BF%E7%94%A8%E5%8F%8A%E4%BF%AE%E6%94%B9/">macleaya主题使用及修改</a></div>
+                <div class="post-title"><a href="/2021/01/29/hexo%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98/">hexo图片路径问题</a></div>
                 <div class="post-meta">
                     
-                    <i class="fa fa-calendar"></i> <time>2021-01-28 09:22:00</time>
-                    <span class="dotted">|</span>
-                    <i class="fa fa-pencil"></i> <time>2021-02-02 10:51:00</time>
+                    <i class="fa fa-calendar"></i> <time>2021-01-29 10:16:00</time>
+
+                    
                 </div>
 
                 <div class="post-excerpt">
 
-                    <a href="/2021/01/28/macleaya%E4%B8%BB%E9%A2%98%E4%BD%BF%E7%94%A8%E5%8F%8A%E4%BF%AE%E6%94%B9/" class="post-excerpt-a">
+                    <a href="/2021/01/29/hexo%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98/" class="post-excerpt-a">
 
                         
 
                         <section class="post-excerpt-div">
                             
-                                <p>这个主题第一眼看上去比较顺眼，安装后在这个主题的基础上，修改和添加了不少东西：</p>
-<p>修改了背景色，修改了其他一些细节的颜色，增加了首页雪花飘落的效果（打算一年四季换不同的颜色搭配😄），雪花只在首页展示</p>
-<p>修改了首页的布局，首页只展示文章，左右两列展示</p>
-<p>修改了导航，导航上除了首页这一项外，其他的都是<code>category</code>分类的内容（带数量），点击打开对应分类的文章列表</p>
-<p>导航左边展示头像和博客名称（原来的位置是在页面右边栏的第一部分）</p>
-<p>右边栏，在非首页的时候才展示，去掉了分类（因为挪到了导航上）</p>
-<p>首页/归档页/标签页的文章列表，增加了文章封面图的样式，如果文章中有图，且图片的位置不在最开始的话，那么就把第一张图放到封面的位置上</p>
-<p>增加了<code>emoji</code>表情</p>
-<p>因为<code>travisCI</code>自动部署后把每个文章的生成时间修改时间都改成了部署的时间，所以每个文章需要用<code>updated</code>写死编辑或部署的时间（这一点实在不太方便，待优化）</p>
-<p>增加了分类页面，展示当前分类下的文章列表（只有时间、标题、文章分类和<code>tag</code>，不展示文章内容），后期也可以考虑将这个页面用于归档页面或标签页面</p>
-<p>目前来说就这些，这个主题使用很简单，配置也非常简单，大部分的修改都是改模板和样式</p>
+                                <p>文章名称是中文时，<code>md</code>文件引入图片后，路径经常不对导致图片出不来，网上搜了之后基本都是安装<code>hexo-asset-image</code>，但是用了之后并没有起作用，最后发现了<code>hexo-image-link</code>这个插件，终于解决了……</p>
+<p>这个插件使用非常简单：</p>
+<ol>
+<li>安装：<code>npm install hexo-image-link --save</code></li>
+<li>修改<code>hexo</code>的配置文件<code>_config.yml</code>中的<code>post_asset_folder</code>为<code>true</code></li>
+<li>md文件中的图片路径用这个格式： <code>![图片说明](文件名/图片名)</code></li>
+</ol>
+<p>就可以了~</p>
 
                             
                         </section>
@@ -159,7 +156,7 @@
                         
                         
                             <i class="fa fa-tags"></i>
-                            <a class="tag-none-link" href="/tags/hexo%E4%B8%BB%E9%A2%98/" rel="tag">hexo主题</a>, <a class="tag-none-link" href="/tags/macleaya/" rel="tag">macleaya</a>
+                            <a class="tag-none-link" href="/tags/hexo/" rel="tag">hexo</a>, <a class="tag-none-link" href="/tags/hexo%E5%9B%BE%E7%89%87/" rel="tag">hexo图片</a>
                         
                     </div>
                 
@@ -172,8 +169,11 @@
                 <div class="post-meta">
                     
                     <i class="fa fa-calendar"></i> <time>2021-01-28 09:47:00</time>
-                    <span class="dotted">|</span>
-                    <i class="fa fa-pencil"></i> <time>2021-01-29 14:00:00</time>
+
+                    
+                        <span class="dotted">|</span>
+                        <i class="fa fa-pencil"></i> <time>2021-01-29 14:00:00</time>
+                    
                 </div>
 
                 <div class="post-excerpt">
@@ -272,30 +272,36 @@
 
     
         <article class="box post post-item">
-                <div class="post-title"><a href="/2021/01/29/hexo%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98/">hexo图片路径问题</a></div>
+                <div class="post-title"><a href="/2021/01/28/macleaya%E4%B8%BB%E9%A2%98%E4%BD%BF%E7%94%A8%E5%8F%8A%E4%BF%AE%E6%94%B9/">macleaya主题使用及修改</a></div>
                 <div class="post-meta">
                     
-                    <i class="fa fa-calendar"></i> <time>2021-01-29 10:16:00</time>
-                    <span class="dotted">|</span>
-                    <i class="fa fa-pencil"></i> <time>2021-01-29 10:16:00</time>
+                    <i class="fa fa-calendar"></i> <time>2021-01-28 09:22:00</time>
+
+                    
+                        <span class="dotted">|</span>
+                        <i class="fa fa-pencil"></i> <time>2021-02-02 10:51:00</time>
+                    
                 </div>
 
                 <div class="post-excerpt">
 
-                    <a href="/2021/01/29/hexo%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98/" class="post-excerpt-a">
+                    <a href="/2021/01/28/macleaya%E4%B8%BB%E9%A2%98%E4%BD%BF%E7%94%A8%E5%8F%8A%E4%BF%AE%E6%94%B9/" class="post-excerpt-a">
 
                         
 
                         <section class="post-excerpt-div">
                             
-                                <p>文章名称是中文时，<code>md</code>文件引入图片后，路径经常不对导致图片出不来，网上搜了之后基本都是安装<code>hexo-asset-image</code>，但是用了之后并没有起作用，最后发现了<code>hexo-image-link</code>这个插件，终于解决了……</p>
-<p>这个插件使用非常简单：</p>
-<ol>
-<li>安装：<code>npm install hexo-image-link --save</code></li>
-<li>修改<code>hexo</code>的配置文件<code>_config.yml</code>中的<code>post_asset_folder</code>为<code>true</code></li>
-<li>md文件中的图片路径用这个格式： <code>![图片说明](文件名/图片名)</code></li>
-</ol>
-<p>就可以了~</p>
+                                <p>这个主题第一眼看上去比较顺眼，安装后在这个主题的基础上，修改和添加了不少东西：</p>
+<p>修改了背景色，修改了其他一些细节的颜色，增加了首页雪花飘落的效果（打算一年四季换不同的颜色搭配😄），雪花只在首页展示</p>
+<p>修改了首页的布局，首页只展示文章，左右两列展示</p>
+<p>修改了导航，导航上除了首页这一项外，其他的都是<code>category</code>分类的内容（带数量），点击打开对应分类的文章列表</p>
+<p>导航左边展示头像和博客名称（原来的位置是在页面右边栏的第一部分）</p>
+<p>右边栏，在非首页的时候才展示，去掉了分类（因为挪到了导航上）</p>
+<p>首页/归档页/标签页的文章列表，增加了文章封面图的样式，如果文章中有图，且图片的位置不在最开始的话，那么就把第一张图放到封面的位置上</p>
+<p>增加了<code>emoji</code>表情</p>
+<p>因为<code>travisCI</code>自动部署后把每个文章的生成时间修改时间都改成了部署的时间，所以每个文章需要用<code>updated</code>写死编辑或部署的时间（这一点实在不太方便，待优化）</p>
+<p>增加了分类页面，展示当前分类下的文章列表（只有时间、标题、文章分类和<code>tag</code>，不展示文章内容），后期也可以考虑将这个页面用于归档页面或标签页面</p>
+<p>目前来说就这些，这个主题使用很简单，配置也非常简单，大部分的修改都是改模板和样式</p>
 
                             
                         </section>
@@ -315,7 +321,7 @@
                         
                         
                             <i class="fa fa-tags"></i>
-                            <a class="tag-none-link" href="/tags/hexo/" rel="tag">hexo</a>, <a class="tag-none-link" href="/tags/hexo%E5%9B%BE%E7%89%87/" rel="tag">hexo图片</a>
+                            <a class="tag-none-link" href="/tags/hexo%E4%B8%BB%E9%A2%98/" rel="tag">hexo主题</a>, <a class="tag-none-link" href="/tags/macleaya/" rel="tag">macleaya</a>
                         
                     </div>
                 
@@ -328,8 +334,11 @@
                 <div class="post-meta">
                     
                     <i class="fa fa-calendar"></i> <time>2021-01-27 17:22:00</time>
-                    <span class="dotted">|</span>
-                    <i class="fa fa-pencil"></i> <time>2021-01-28 11:05:00</time>
+
+                    
+                        <span class="dotted">|</span>
+                        <i class="fa fa-pencil"></i> <time>2021-01-28 11:05:00</time>
+                    
                 </div>
 
                 <div class="post-excerpt">
@@ -379,8 +388,8 @@
                 <div class="post-meta">
                     
                     <i class="fa fa-calendar"></i> <time>2021-01-18 16:42:00</time>
-                    <span class="dotted">|</span>
-                    <i class="fa fa-pencil"></i> <time>2021-01-18 16:42:00</time>
+
+                    
                 </div>
 
                 <div class="post-excerpt">
@@ -443,6 +452,10 @@
     <ul class="item-box">
         
             
+                <li><a href="/2021/02/02/%E5%8E%BB%E5%B9%B4%E6%80%BB%E7%BB%93&%E6%96%B0%E5%B9%B4%E8%AE%A1%E5%88%92/">去年总结&amp;新年计划</a></li>
+            
+        
+            
                 <li><a href="/2021/01/29/hexo%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98/">hexo图片路径问题</a></li>
             
         
@@ -469,7 +482,7 @@
         
   <div class="box widget">
     <div class="title">归档</div>
-    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">2021-01</a><span class="archive-list-count">5</span></li></ul>
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">2021-02</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">2021-01</a><span class="archive-list-count">5</span></li></ul>
   </div>
 
     
@@ -477,7 +490,7 @@
     <div class="box widget">
         <div class="title">标签</div>
         <div class="item-box cloud-label">
-            <a href="/tags/Icarus/" style="font-size: 10px;">Icarus</a> <a href="/tags/emoji/" style="font-size: 10px;">emoji</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/hexo%E4%B8%BB%E9%A2%98/" style="font-size: 20px;">hexo主题</a> <a href="/tags/hexo%E5%9B%BE%E7%89%87/" style="font-size: 10px;">hexo图片</a> <a href="/tags/macleaya/" style="font-size: 10px;">macleaya</a> <a href="/tags/%E5%86%B2%E7%BB%B3/" style="font-size: 10px;">冲绳</a> <a href="/tags/%E6%B8%B8%E8%AE%B0/" style="font-size: 10px;">游记</a>
+            <a href="/tags/Icarus/" style="font-size: 10px;">Icarus</a> <a href="/tags/emoji/" style="font-size: 10px;">emoji</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/hexo%E4%B8%BB%E9%A2%98/" style="font-size: 20px;">hexo主题</a> <a href="/tags/hexo%E5%9B%BE%E7%89%87/" style="font-size: 10px;">hexo图片</a> <a href="/tags/macleaya/" style="font-size: 10px;">macleaya</a> <a href="/tags/plan/" style="font-size: 10px;">plan</a> <a href="/tags/%E5%86%B2%E7%BB%B3/" style="font-size: 10px;">冲绳</a> <a href="/tags/%E6%B8%B8%E8%AE%B0/" style="font-size: 10px;">游记</a>
         </div>
     </div>
 
